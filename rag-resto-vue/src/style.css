@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
+@import "tailwindcss";
+
+/* Custom CSS Variables - Indonesian/Javanese Theme */
+:root {
+  --color-primary: 166 124 82;
+  /* Coklat Jawa */
+  --color-secondary: 22 163 74;
+  /* Hijau Daun */
+  --color-accent: 217 119 6;
+  /* Oranye Terracotta */
+  --color-batik: 79 70 229;
+  /* Indigo Batik */
+}
+
+* {
+  border-color: rgb(226 232 240);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fdf8f6;
+  color: rgb(61 47 34);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', 'Outfit', serif;
+  font-weight: 700;
+  color: rgb(61 47 34);
+}
+
+/* Glassmorphism utility with Indonesian touch */
+.glass {
+  background-color: rgba(253, 248, 246, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(166, 124, 82, 0.2);
+}
+
+.glass-dark {
+  background-color: rgba(61, 47, 34, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(166, 124, 82, 0.3);
+}
+
+/* Gradient backgrounds - Indonesian palette */
+.gradient-primary {
+  background: linear-gradient(135deg, #a67c52 0%, #8b6f47 50%, #d97706 100%);
+}
+
+.gradient-secondary {
+  background: linear-gradient(135deg, #16a34a 0%, #a67c52 50%, #d97706 100%);
+}
+
+.gradient-batik {
+  background: linear-gradient(135deg, #4f46e5 0%, #a67c52 50%, #d97706 100%);
+}
+
+/* Batik pattern overlay */
+.batik-overlay {
+  position: relative;
+}
+
+.batik-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23a67c52' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* Button styles - Indonesian theme */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #a67c52 0%, #8b6f47 100%);
+  color: #fdf8f6;
+  box-shadow: 0 4px 6px -1px rgba(166, 124, 82, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #8b6f47 0%, #6d5639 100%);
+  box-shadow: 0 10px 15px -3px rgba(166, 124, 82, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-primary:active {
+  transform: scale(0.95);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  color: #fdf8f6;
+  box-shadow: 0 4px 6px -1px rgba(22, 163, 74, 0.3);
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #15803d 0%, #166534 100%);
+  box-shadow: 0 10px 15px -3px rgba(22, 163, 74, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-secondary:active {
+  transform: scale(0.95);
+}
+
+.btn-outline {
+  border: 2px solid #a67c52;
+  color: #a67c52;
+  background-color: transparent;
+}
+
+.btn-outline:hover {
+  background: linear-gradient(135deg, #a67c52 0%, #8b6f47 100%);
+  color: #fdf8f6;
+  transform: translateY(-2px);
+}
+
+.btn-outline:active {
+  transform: scale(0.95);
+}
+
+/* Card styles with Indonesian touch */
+.card {
+  background-color: #fdf8f6;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(166, 124, 82, 0.1), 0 2px 4px -1px rgba(166, 124, 82, 0.06);
+  transition: all 0.3s;
+  padding: 1.5rem;
+  border: 1px solid rgba(166, 124, 82, 0.1);
+}
+
+.card:hover {
+  box-shadow: 0 20px 25px -5px rgba(166, 124, 82, 0.15), 0 10px 10px -5px rgba(166, 124, 82, 0.04);
+}
+
+.card-hover {
+  background-color: #fdf8f6;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(166, 124, 82, 0.1), 0 2px 4px -1px rgba(166, 124, 82, 0.06);
+  transition: all 0.3s;
+  border: 1px solid rgba(166, 124, 82, 0.1);
+  overflow: hidden;
+}
+
+.card-hover:hover {
+  box-shadow: 0 20px 25px -5px rgba(166, 124, 82, 0.2), 0 10px 10px -5px rgba(166, 124, 82, 0.08);
+  transform: translateY(-0.25rem);
+  border-color: rgba(166, 124, 82, 0.3);
+}
+
+/* Input styles */
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1.5px solid rgba(166, 124, 82, 0.2);
+  outline: none;
+  transition: all 0.2s;
+  background-color: white;
+}
+
+.input:focus {
+  border-color: #a67c52;
+  box-shadow: 0 0 0 3px rgba(166, 124, 82, 0.1);
+}
+
+.input-error {
+  border-color: #dc2626;
+}
+
+.input-error:focus {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+/* Container */
+.container-custom {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-custom {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-custom {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Decorative elements */
+.ornament-top {
+  position: relative;
+}
+
+.ornament-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #a67c52, transparent);
+  border-radius: 2px;
+}
+
+/* Tagline style */
+.tagline-aesthetic {
+  font-family: 'Dancing Script', cursive;
+  letter-spacing: 0.05em;
+}
